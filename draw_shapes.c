@@ -25,4 +25,13 @@ void print_triangle(int leftCol, int size)
     putchar('\n');
   }
 }
+void print_arrow(int TleftC, int Tsize, int SleftC, int Ssize){
+  for (int row = 0; row <= Tsize; row++) {
+    int minCol = TleftC + Tsize - row, maxCol = TleftC + size + row;
+    int col;
+    for (col = 0; col < minCol; col++) putchar(' ');
+    for (       ; col <= maxCol; col++) putchar('*');
+    putchar('\n');
+  }
+}
 
